@@ -31,7 +31,8 @@ const CondenserGrid = (props) => {
       disabled: isFetching,
     })
 
-    content = <div className={containerClassname}>{renderedCondensers}</div>
+    // content = <div className={containerClassname}>{renderedCondensers}</div>
+    content = renderedCondensers
   } else if (isError) {
     content = <div>{error.toString()}</div>
   }
