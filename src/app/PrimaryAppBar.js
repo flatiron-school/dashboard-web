@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useState } from 'react'
 import AnalyticsIcon from '@mui/icons-material/Analytics'
 import AppBar from '@mui/material/AppBar'
 import { styled, useTheme } from '@mui/material/styles'
@@ -21,14 +22,13 @@ import ListItem from '@mui/material/ListItem'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import { SpeedDialIcon } from '@mui/material'
-import CondenserGrid from './CondenserGrid'
+import CondenserGrid from '../features/condensers/CondenserGrid'
 
-export default function PrimarySearchAppBar() {
+const PrimaryAppBar = (props) => {
   const theme = useTheme()
-  const [open, setOpen] = React.useState(false)
-  const [anchorEl, setAnchorEl] = React.useState(null)
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
-
+  const [open, setOpen] = useState(false)
+  const [anchorEl, setAnchorEl] = useState(null)
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null)
   const isMenuOpen = Boolean(anchorEl)
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
 
@@ -227,3 +227,5 @@ export default function PrimarySearchAppBar() {
     </Box>
   )
 }
+
+export default PrimaryAppBar 
