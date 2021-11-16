@@ -12,6 +12,6 @@ code {
     monospace;
 }
 
-.posts-container.disabled {
+.condensers-container.disabled {
   opacity: 0.5;
 }

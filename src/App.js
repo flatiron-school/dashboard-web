@@ -19,11 +19,8 @@ const App = () => {
             exact
             path="/"
             render={() => (
-              // <React.Fragment>
                 <PrimaryAppBar />
-              // </React.Fragment>
             )}
-            // component={PrimaryAppBar}
           />
           <Redirect to="/" />
         </Switch>
